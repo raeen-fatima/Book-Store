@@ -20,7 +20,8 @@ function Signup() {
       password: data.password,
     };
     await axios
-      .post("http://localhost:4003/user/signup", userInfo)
+      .post(`${import.meta.env.VITE_API_URL}/user/signup`, userInfo)
+
       .then((res) => {
         console.log(res.data);
         if (res.data) {
@@ -89,7 +90,7 @@ function Signup() {
                 <span>Password</span>
                 <br />
                 <input
-                  type="text"
+                  type="password"
                   placeholder="Enter your password"
                   className="w-80 px-3 py-1 border rounded-md outline-none"
                   {...register("password", { required: true })}

@@ -1,86 +1,84 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
+import { FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormData({ name: "", email: "", message: "" });
+  const onSubmit = (data) => {
+    console.log("Contact Form Data:", data);
+    reset();
   };
 
   return (
-    <div className="pt-20 bg-white text-black  dark:bg-slate-900 dark:text-whitemin-h-screen flex flex-col items-center justify-center p-6">
-      <div className="max-w-6xl w-full bg-white p-10 rounded-2xl shadow-xl flex flex-col md:flex-row gap-8">
-        
-        {/* Form Section */}
-        <div className="w-full md:w-1/2">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">📞 Get in Touch</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="block bg-white text-gray-700 font-semibold">Name</label>
-              <input type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full p-3 border bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Enter your name" />
-            </div>
-            <div>
-              <label className="block  text-gray-700 font-semibold">Email</label>
-              <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full bg-white p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Enter your email" />
-            </div>
-            <div>
-              <label className="block text-gray-700 font-semibold">Message</label>
-              <textarea name="message" value={formData.message} onChange={handleChange} required className="w-full bg-white p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" rows="4" placeholder="Type your message..."></textarea>
-            </div>
-            <button type="submit" className="w-full bg-pink-500 text-white font-semibold p-3 rounded-lg hover:bg-pink-700 transition duration-300">Send Message</button>
-            {submitted && <p className="text-green-700 font-semibold mt-2 text-center">✅ Message Sent Successfully!</p>}
-          </form>
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-white to-slate-200 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 px-4 py-20 flex flex-col items-center justify-center gap-16">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-full max-w-4xl p-8 bg-white/90 dark:bg-slate-800/70 backdrop-blur-md rounded-2xl shadow-xl border border-gray-200 dark:border-slate-700"
+      >
+        <h3 className="text-3xl font-bold text-center text-slate-800 dark:text-white mb-6 flex justify-center items-center gap-2">
+          <FaEnvelope className="text-pink-600" /> Contact Us
+        </h3>
+        <form onSubmit={handleSubmit(onSubmit)} className="grid md:grid-cols-2 gap-6">
+          <div>
+            <label className="block mb-1 font-medium text-gray-700 dark:text-gray-300">Name</label>
+            <input
+              type="text"
+              {...register("name", { required: true })}
+              className="w-full px-4 py-2 border rounded-lg outline-none bg-white dark:bg-slate-700 dark:text-white"
+              placeholder="Your name"
+            />
+            {errors.name && <p className="text-sm text-red-500 mt-1">Name is required</p>}
+          </div>
+          <div>
+            <label className="block mb-1 font-medium text-gray-700 dark:text-gray-300">Email</label>
+            <input
+              type="email"
+              {...register("email", { required: true })}
+              className="w-full px-4 py-2 border rounded-lg outline-none bg-white dark:bg-slate-700 dark:text-white"
+              placeholder="you@example.com"
+            />
+            {errors.email && <p className="text-sm text-red-500 mt-1">Email is required</p>}
+          </div>
+          <div className="md:col-span-2">
+            <label className="block mb-1 font-medium text-gray-700 dark:text-gray-300">Message</label>
+            <textarea
+              {...register("message", { required: true })}
+              rows="4"
+              className="w-full px-4 py-2 border rounded-lg outline-none bg-white dark:bg-slate-700 dark:text-white"
+              placeholder="Write your message..."
+            ></textarea>
+            {errors.message && <p className="text-sm text-red-500 mt-1">Message is required</p>}
+          </div>
+          <div className="md:col-span-2 text-center">
+            <button
+              type="submit"
+              className="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition duration-200"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+        <div className="mt-10 rounded-xl overflow-hidden shadow-lg">
+          <iframe
+            title="Book Haven Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448158.01987509876!2d76.76357027361095!3d28.644800481200314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd4094f4aa3f%3A0x5b9a482b9566775!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1719371885406!5m2!1sen!2sin"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-
-        {/* Contact Info Section */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6">
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-800">📍 Address</h3>
-            <p className="text-gray-700">123, Book Street, New Delhi, India</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-800">E-mail</h3>
-            <p className="text-pink-600 font-semibold">support@bookhaven.com</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-800">📞 Phone</h3>
-            <p className="text-gray-700">+91 9876543210</p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-800">🌐 Follow Us</h3>
-            <div className="flex space-x-4 mt-2">
-              <a href="#" className="text-blue-500 text-2xl hover:text-blue-700">📘</a>
-              <a href="#" className="text-pink-500 text-2xl hover:text-pink-700">📸</a>
-              <a href="#" className="text-blue-400 text-2xl hover:text-blue-600">🐦</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* FAQs Section */}
-      <div className="max-w-6xl w-full  p-10 rounded-2xl shadow-xl mt-8">
-        <h3 className="text-2xl font-semibold dark:text-white text-gray-800 mb-4">❓ Frequently Asked Questions</h3>
-        <details className="border-b py-2">
-          <summary className="cursor-pointer text-blue-600 font-semibold">How can I track my order?</summary>
-          <p className="text-gray-600 mt-2">You can track your order from the &apos;My Orders&apos; section in your account.</p>
-        </details>
-        <details className="border-b py-2">
-          <summary className="cursor-pointer text-blue-600 font-semibold">Do you offer returns?</summary>
-          <p className="text-gray-600 mt-2">Yes, you can return a book within 7 days of delivery.</p>
-        </details>
-        <details className="border-b py-2">
-          <summary className="cursor-pointer text-blue-600 font-semibold">How do I contact customer support?</summary>
-          <p className="text-gray-600 mt-2">You can email us at support@bookhaven.com or call +91 9876543210.</p>
-        </details>
-      </div>
+      </motion.div>
     </div>
   );
 };
