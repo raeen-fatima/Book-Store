@@ -36,10 +36,28 @@ function Course() {
       title: "Cybersecurity Basics",
       author: "Raeen Fatima",
       image: "https://m.media-amazon.com/images/I/7109NPQA5cL._UF1000,1000_QL80_.jpg",
-      price: 599,
+      price: 8999,
       category: "Paid",
       description: "Understand the fundamentals of cybersecurity with practical scenarios."
     },
+    {
+      id: 5,
+      title: "How to Speak In Tech",
+      author: "Kevin",
+      image: "https://m.media-amazon.com/images/I/71QeAXjMrlL._UF1000,1000_QL80_.jpg",
+      price: 899,
+      category: "Paid",
+      description: "Master the art of communication in tech environments."
+    },
+    {
+      id: 6,
+      title: "Elon Musk: The Innovator",
+      author: "Alon Musk",
+      image: "https://media.wired.com/photos/61b39d0dafed9525c50efc26/4:3/w_960,c_limit/Gear-Best-Tech-Books-Elon-Musk.jpg",
+      price: 999,
+      category: "Paid",
+      description: "Explore the life and innovations of one of the greatest tech entrepreneurs."
+    }
   ]);
 
   useEffect(() => {
