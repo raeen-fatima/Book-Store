@@ -7,48 +7,47 @@ import Slider from "react-slick";
 import Cards from "./Cards";
 
 function Freebook() {
-  const [book, setBook] = useState([
-    {
-      id: 1,
-      title: "Introduction to JavaScript",
-      author: "John Doe",
-      image: "https://jscrambler.com/images/blog-images/eloquent-javascript-second-edition-book.png",
-      price: 0,
-      category: "Free",
-      description: "Learn the basics of JavaScript from scratch."
-    },
-    {
-      id: 2,
-      title: "Python for Beginners",
-      author: "Jane Smith",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwwYW6_8EQbTpMxztIGaFa2g_zRLuKBHVbvA&s",
-      price: 0,
-      category: "Free",
-      description: "A beginner-friendly course on Python programming."
-    },
-    {
-      id: 3,
-      title: "HTML & CSS Crash Course",
-      author: "Alex Johnson",
-      image: "https://cdn.cssauthor.com/wp-content/uploads/2023/07/How-to-Code-in-HTML-and-CSS.jpg?strip=all&lossy=1&ssl=1",
-      price: 0,
-      category: "Free",
-      description: "Master the web basics: HTML and CSS."
-    },
-    {
-      id: 4,
-      title: "Git & GitHub Essentials",
-      author: "Nina Patel",
-      image: "https://m.media-amazon.com/images/I/41nX-FyppCL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOURANDHALF-medium,BottomLeft,30,-20_ZA64,500,900,420,420,AmazonEmber,50,4,0,0_QL100_.jpg",
-      price: 0,
-      category: "Free",
-      description: "Learn version control using Git and GitHub."
-    },
-  ]);
-
-  useEffect(() => {
+  // const [book, setBook] = useState([
+  //   {
+  //     id: 1,
+  //     title: "Introduction to JavaScript",
+  //     author: "John Doe",
+  //     image: "https://jscrambler.com/images/blog-images/eloquent-javascript-second-edition-book.png",
+  //     price: 0,
+  //     category: "Free",
+  //     description: "Learn the basics of JavaScript from scratch."
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Python for Beginners",
+  //     author: "Jane Smith",
+  //     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwwYW6_8EQbTpMxztIGaFa2g_zRLuKBHVbvA&s",
+  //     price: 0,
+  //     category: "Free",
+  //     description: "A beginner-friendly course on Python programming."
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "HTML & CSS Crash Course",
+  //     author: "Alex Johnson",
+  //     image: "https://cdn.cssauthor.com/wp-content/uploads/2023/07/How-to-Code-in-HTML-and-CSS.jpg?strip=all&lossy=1&ssl=1",
+  //     price: 0,
+  //     category: "Free",
+  //     description: "Master the web basics: HTML and CSS."
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "Git & GitHub Essentials",
+  //     author: "Nina Patel",
+  //     image: "https://m.media-amazon.com/images/I/41nX-FyppCL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_PIRIOFOURANDHALF-medium,BottomLeft,30,-20_ZA64,500,900,420,420,AmazonEmber,50,4,0,0_QL100_.jpg",
+  //     price: 0,
+  //     category: "Free",
+  //     description: "Learn version control using Git and GitHub."
+  //   },
+  // ]);
+  const [book, setBook] = useEffect(() => {
     // When API is ready, you can use this block
-    /*
+    
     const getBook = async () => {
       try {
         const res = await axios.get(`${import.meta.env.VITE_API_URL}/book`);
@@ -60,7 +59,7 @@ function Freebook() {
       }
     };
     getBook();
-    */
+    
   }, []);
 
   var settings = {
