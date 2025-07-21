@@ -1,44 +1,83 @@
-import banner from "../../public/Banner.png";
-function Banner() {
+import { motion } from "framer-motion";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import banner from "../../public/Banner2.png";
+
+export default function Banner() {
+  const [text] = useTypewriter({
+    words: [
+      "Web Development 💻",
+      "Cybersecurity 🔐",
+      "Cloud Computing ☁️",
+      "AI & ML 🤖",
+      "DevOps 🛠️",
+    ],
+    loop: true,
+    delaySpeed: 2000,
+  });
+
   return (
-    <>
-      <div className="bg-white text-black  dark:bg-slate-900 dark:text-white max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
-        <div className="w-full order-2 md:order-1 md:w-1/2 mt-12 md:mt-36">
-          <div className="space-y-8">
-            <h1 className="text-2xl md:text-4xl font-bold">
-              Hello, welcomes here to learn something{" "}
-              <span className="text-pink-500">new everyday!!!</span>
-            </h1>
-            <p className="text-sm md:text-xl">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-              et totam. Tempora amet atque expedita, quae corrupti totam sed
-              pariatur corporis at veniam est voluptas animi!
-            </p>
-            <label className="input bg-white input-bordered flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                className="w-4 h-4 opacity-70"
-              >
-                <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
-                <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
-              </svg>
-              <input type="text" className= "grow" placeholder="Email" />
-            </label>
+    <section className="relative mt-16 bg-white dark:bg-slate-900 text-black dark:text-white">
+      <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-16">
+        {/* Left Content */}
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="w-full md:w-1/2 space-y-6"
+        >
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+            Hello, welcome here to learn{" "}
+            <span className="text-pink-500 underline decoration-pink-400 underline-offset-4">
+              something new
+            </span>{" "}
+            everyday!
+          </h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"
+          >
+            Whether you're starting your journey or advancing your skills,
+            you're in the right place. Dive into powerful tools and modern
+            technologies that are shaping the future of the digital world.
+            Let’s build, break, and learn together.
+          </motion.p>
+
+          <h2 className="text-xl font-medium text-gray-700 dark:text-gray-300">
+            Explore:{" "}
+            <span className="text-pink-600 font-semibold">
+              {text}
+              <Cursor cursorColor="#ec4899" />
+            </span>
+          </h2>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold transition-all duration-300"
+          >
+            Get Started
+          </motion.button>
+        </motion.div>
+
+        {/* Right Content */}
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="w-full md:w-1/2 flex justify-center"
+        >
+          <div className="rounded-3xl overflow-hidden  p-4 ">
+            <img
+              src={banner}
+              alt="Banner"
+              className="w-full max-w-md object-contain"
+            />
           </div>
-          <button className="btn mt-6 btn-secondary">Get Started</button>
-        </div>
-        <div className=" order-1 w-full mt-20 md:w-1/2">
-          <img
-            src={banner}
-            className="md:w-[550px] md:h-[460px] md:ml-12"
-            alt=""
-          />
-        </div>
+        </motion.div>
       </div>
-    </>
+    </section>
   );
 }
-
-export default Banner;

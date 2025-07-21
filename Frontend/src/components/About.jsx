@@ -51,7 +51,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="bg-gradient-to-tr from-slate-100 to-white dark:from-slate-900 dark:to-slate-800 min-h-screen pt-20 px-6 text-black dark:text-white m-9"
+      className=" dark:from-slate-900 dark:to-slate-800 min-h-screen pt-20 px-6 text-black dark:text-white m-9"
     >
       <div className="max-w-6xl mx-auto space-y-20">
         {/* Hero Section */}
@@ -81,7 +81,7 @@ const About = () => {
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md text-center"
+              className="bg-pink-500/10 dark:bg-slate-800 p-8 rounded-xl shadow-md text-center"
             >
               {feature.icon}
               <h3 className="text-2xl font-semibold mb-3">{feature.title}</h3>
@@ -95,10 +95,10 @@ const About = () => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="bg-pink-100 dark:bg-slate-700 p-10 rounded-2xl shadow-md"
+          className="bg-pink-600 dark:bg-slate-700 p-10  shadow-md"
         >
-          <h2 className="text-3xl font-bold text-pink-700 dark:text-pink-300 mb-3">📖 Our Mission</h2>
-          <p className="text-gray-700 dark:text-gray-300 text-lg">
+          <h2 className="text-3xl font-bold text-pink-200 dark:text-pink-300 mb-3">📖 Our Mission</h2>
+          <p className="text-gray-400 dark:text-gray-300 text-lg">
             We believe that books change lives. At Book Haven, our mission is to bring the magic of reading to every corner of the country. We’re here to inspire curiosity, foster creativity, and support lifelong learning for people of all ages and backgrounds.
           </p>
         </motion.section>

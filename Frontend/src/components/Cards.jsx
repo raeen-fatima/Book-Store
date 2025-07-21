@@ -2,11 +2,12 @@ function Cards({ item }) {
   return (
     <div className="mt-4 my-3 p-3">
       <div className="card w-80 shadow-xl hover:scale-105 duration-200 bg-white text-black dark:bg-slate-900 dark:text-white dark:border">
-        <figure className="h-48 overflow-hidden">
+        {/* Figure section with background and image contained inside */}
+        <figure className="h-48 bg-white dark:bg-white flex items-center justify-center">
           <img
             src={item.image}
             alt={item.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </figure>
         <div className="card-body">
