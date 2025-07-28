@@ -27,7 +27,7 @@ export default function Banner() {
         >
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Hello, welcome here to learn{" "}
-            <span className="text-rose-500 underline decoration-rose-400 underline-offset-4">
+            <span className="text-rose-500 underline decoration-rose-400 font-sans underline-offset-4">
               something new
             </span>{" "}
             everyday!
