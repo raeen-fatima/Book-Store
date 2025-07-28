@@ -45,7 +45,7 @@ function Navbar() {
   return (
     <div
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-        sticky ? "shadow-md bg-pink-500/10 backdrop-blur-lg dark:bg-slate-800" : "bg-white dark:bg-slate-800"
+        sticky ? "shadow-md bg-rose-500/10 backdrop-blur-lg dark:bg-slate-800" : "bg-white dark:bg-slate-800"
       }`}
     >
       <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 py-3 flex items-center justify-between">
@@ -64,7 +64,7 @@ function Navbar() {
           </div>
 
           {/* Brand */}
-          <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-pink-600 dark:text-white">
+          <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-rose-600 dark:text-white">
             <FiBookOpen className="text-3xl" />
             <span>booksHaven</span>
           </Link>
@@ -122,7 +122,7 @@ function Navbar() {
             <div>
               <button
                 onClick={() => document.getElementById("my_modal_3").showModal()}
-                className="bg-black text-white px-3 py-2 rounded-md hover:bg-pink-600 duration-300 text-sm"
+                className="bg-black text-white px-3 py-2 rounded-md hover:bg-rose-600 duration-300 text-sm"
               >
                 Login
               </button>

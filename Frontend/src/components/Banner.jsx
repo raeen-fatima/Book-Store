@@ -27,7 +27,7 @@ export default function Banner() {
         >
           <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Hello, welcome here to learn{" "}
-            <span className="text-pink-500 underline decoration-pink-400 underline-offset-4">
+            <span className="text-rose-500 underline decoration-rose-400 underline-offset-4">
               something new
             </span>{" "}
             everyday!
@@ -47,7 +47,7 @@ export default function Banner() {
 
           <h2 className="text-xl font-medium text-gray-700 dark:text-gray-300">
             Explore:{" "}
-            <span className="text-pink-600 font-semibold">
+            <span className="text-rose-600 font-semibold">
               {text}
               <Cursor cursorColor="#ec4899" />
             </span>
@@ -56,7 +56,7 @@ export default function Banner() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold transition-all duration-300"
+            className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-2xl shadow-lg font-semibold transition-all duration-300"
           >
             Get Started
           </motion.button>

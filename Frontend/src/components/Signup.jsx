@@ -41,7 +41,7 @@ function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-white via-gray-100 to-pink-100 dark:from-slate-900 dark:to-slate-800 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-white via-gray-100 to-rose-100 dark:from-slate-900 dark:to-slate-800 p-4">
       <div className="w-full max-w-md bg-white dark:bg-slate-900 shadow-xl rounded-2xl px-8 py-10 relative">
         {/* Close Button */}
         <Link
@@ -51,7 +51,7 @@ function Signup() {
           ✕
         </Link>
 
-        <h2 className="text-3xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-red-500">
+        <h2 className="text-3xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-red-500">
           Create an Account
         </h2>
 
@@ -103,7 +103,7 @@ function Signup() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded-md transition-all duration-300 shadow-lg"
+            className="w-full bg-rose-600 hover:bg-rose-700 text-white font-semibold py-2 px-4 rounded-md transition-all duration-300 shadow-lg"
           >
             Signup
           </button>

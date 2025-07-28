@@ -3,19 +3,19 @@ import { FaBookOpen, FaUserFriends, FaRocket, FaGlobeAsia, FaCreditCard, FaGift,
 
 const features = [
   {
-    icon: <FaBookOpen className="text-5xl text-pink-500 mb-4" />,
+    icon: <FaBookOpen className="text-5xl text-rose-500 mb-4" />,
     title: "Curated Book Collection",
     description:
       "At Book Haven, we go beyond just stocking books — we hand-select every title in our library. Whether you're into gripping thrillers, enlightening non-fiction, or classic literature, our catalog has been thoughtfully curated to suit the tastes of diverse readers."
   },
   {
-    icon: <FaUserFriends className="text-5xl text-pink-500 mb-4" />,
+    icon: <FaUserFriends className="text-5xl text-rose-500 mb-4" />,
     title: "Community of Readers",
     description:
       "Our platform is more than just a bookstore — it's a vibrant community. Join discussions, write reviews, share book lists, and connect with fellow readers who are as passionate about books as you are."
   },
   {
-    icon: <FaRocket className="text-5xl text-pink-500 mb-4" />,
+    icon: <FaRocket className="text-5xl text-rose-500 mb-4" />,
     title: "Swift & Safe Delivery",
     description:
       "Your books, delivered swiftly and safely. Our logistics network ensures that every order reaches your doorstep on time, in perfect condition, and with full tracking so you’re never left wondering."
@@ -61,7 +61,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-5xl font-bold mb-4">About <span className="text-pink-600">Book Haven</span></h1>
+          <h1 className="text-5xl font-bold mb-4">About <span className="text-rose-600">Book Haven</span></h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Book Haven is your gateway to an inspiring literary experience. We aim to bridge the gap between readers and great books through curated selections, a vibrant community, and seamless service. Our passion is rooted in storytelling, learning, and connection.
           </p>
@@ -81,7 +81,7 @@ const About = () => {
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-pink-500/10 dark:bg-slate-800 p-8 rounded-xl shadow-md text-center"
+              className="bg-rose-500/10 dark:bg-slate-800 p-8 rounded-xl shadow-md text-center"
             >
               {feature.icon}
               <h3 className="text-2xl font-semibold mb-3">{feature.title}</h3>
@@ -95,9 +95,9 @@ const About = () => {
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="bg-pink-600 dark:bg-slate-700 p-10  shadow-md"
+          className="bg-rose-600 dark:bg-slate-700 p-10  shadow-md"
         >
-          <h2 className="text-3xl font-bold text-pink-200 dark:text-pink-300 mb-3">📖 Our Mission</h2>
+          <h2 className="text-3xl font-bold text-rose-200 dark:text-rose-300 mb-3">📖 Our Mission</h2>
           <p className="text-gray-400 dark:text-gray-300 text-lg">
             We believe that books change lives. At Book Haven, our mission is to bring the magic of reading to every corner of the country. We’re here to inspire curiosity, foster creativity, and support lifelong learning for people of all ages and backgrounds.
           </p>
@@ -110,7 +110,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-md"
         >
-          <h2 className="text-3xl font-bold text-pink-600 flex items-center gap-3 mb-6">
+          <h2 className="text-3xl font-bold text-rose-600 flex items-center gap-3 mb-6">
             <FaQuestionCircle className="text-2xl" /> Frequently Asked Questions
           </h2>
           <div className="space-y-6">
@@ -130,7 +130,7 @@ const About = () => {
           transition={{ duration: 1 }}
           className="text-center text-gray-600 dark:text-gray-400 mb-5"
         >
-          Thank you for choosing <span className="text-pink-600 font-semibold">Book Haven</span>. Discover stories. Discover yourself. 📚
+          Thank you for choosing <span className="text-rose-600 font-semibold">Book Haven</span>. Discover stories. Discover yourself. 📚
         </motion.p>
       </div>
     </motion.div>

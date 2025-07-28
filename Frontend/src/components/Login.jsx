@@ -69,7 +69,7 @@ function Login() {
               <input
                 type="email"
                 placeholder="you@example.com"
-                className={`w-full px-4 py-2 rounded-md bg-white dark:bg-slate-800 border transition focus:outline-none focus:ring-2 focus:ring-pink-500 ${
+                className={`w-full px-4 py-2 rounded-md bg-white dark:bg-slate-800 border transition focus:outline-none focus:ring-2 focus:ring-rose-500 ${
                   errors.email ? "border-red-500" : "border-gray-300"
                 }`}
                 {...register("email", { required: true })}
@@ -85,7 +85,7 @@ function Login() {
               <input
                 type="password"
                 placeholder="••••••••"
-                className={`w-full px-4 py-2 rounded-md bg-white dark:bg-slate-800 border transition focus:outline-none focus:ring-2 focus:ring-pink-500 ${
+                className={`w-full px-4 py-2 rounded-md bg-white dark:bg-slate-800 border transition focus:outline-none focus:ring-2 focus:ring-rose-500 ${
                   errors.password ? "border-red-500" : "border-gray-300"
                 }`}
                 {...register("password", { required: true })}
@@ -101,7 +101,7 @@ function Login() {
             <div className="flex flex-col items-center gap-4">
               <button
                 type="submit"
-                className="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded-md transition duration-300 font-semibold shadow"
+                className="w-full bg-rose-600 hover:bg-rose-700 text-white py-2 rounded-md transition duration-300 font-semibold shadow"
               >
                 Login
               </button>

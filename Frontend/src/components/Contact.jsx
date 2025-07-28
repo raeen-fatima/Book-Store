@@ -24,7 +24,7 @@ const Contact = () => {
         className="w-full max-w-4xl p-8 bg-white/90 dark:bg-slate-800/70 backdrop-blur-md rounded-2xl shadow-xl border border-gray-200 dark:border-slate-700"
       >
         <h3 className="text-3xl font-bold text-center text-slate-800 dark:text-white mb-6 flex justify-center items-center gap-2">
-          <FaEnvelope className="text-pink-600" /> Contact Us
+          <FaEnvelope className="text-rose-600" /> Contact Us
         </h3>
         <form onSubmit={handleSubmit(onSubmit)} className="grid md:grid-cols-2 gap-6">
           <div>
@@ -60,7 +60,7 @@ const Contact = () => {
           <div className="md:col-span-2 text-center">
             <button
               type="submit"
-              className="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition duration-200"
+              className="bg-rose-600 text-white px-6 py-2 rounded-full hover:bg-rose-700 transition duration-200"
             >
               Send Message
             </button>

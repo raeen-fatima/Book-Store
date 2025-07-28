@@ -60,7 +60,7 @@ function Freebook() {
   };
 
   return (
-    <div className="bg-white text-black dark:bg-slate-900 dark:text-white max-w-screen-2xl container mx-auto md:px-20 px-4 py-10">
+    <div className="bg-white text-black  dark:bg-slate-900 dark:text-white max-w-screen-2xl container mx-auto md:px-20 px-4 py-10">
       <div className="mb-6">
         <h1 className="font-semibold text-xl pb-2">Free Offered Courses</h1>
         <p className="text-sm text-gray-600 dark:text-gray-300">
