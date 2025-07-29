@@ -13,7 +13,7 @@ function App() {
   console.log(authUser);
   return (
     <>
-      <div className="bg-white text-black dark:bg-slate-900 dark:text-white">
+      <div className="min-h-screen bg-white text-black dark:bg-slate-900 dark:text-white">
         
         <Routes>
           <Route path="/" element={<Home />} />
