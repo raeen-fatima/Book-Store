@@ -37,8 +37,8 @@ function Navbar() {
     <>
       <li><Link to="/">Home</Link></li>
       <li><Link to="/course">Course</Link></li>
-      <li><Link to="/contact">Contact Us</Link></li>
       <li><Link to="/about">About Us</Link></li>
+      <li><Link to="/contact">Contact Us</Link></li>
     </>
   );
 
@@ -58,7 +58,7 @@ function Navbar() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h10m-10 6h16" />
               </svg>
             </button>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 dark:bg-slate-700 rounded-box w-52">
+            <ul tabIndex={0} className="menu menu-sm text-white dropdown-content mt-3 z-[1] p-2 shadow bg-rose-700/70 backdrop-blur-md dark:bg-rose-700/70 rounded-box w-52">
               {navItems}
             </ul>
           </div>
@@ -92,7 +92,7 @@ function Navbar() {
           </div>
 
           {/* Theme Toggle */}
-          <label className="swap swap-rotate cursor-pointer">
+          <label className="swap swap-rotate pl-2 cursor-pointer">
             <input type="checkbox" />
              {/* sun icon */}
               <svg
